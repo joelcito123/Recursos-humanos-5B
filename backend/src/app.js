@@ -6,3 +6,7 @@ const profesionesRoutesApi = require("./routes/profesionesRoutesApi");
 
 app.use("/aspirantes", aspirantesRoutesApi);
 app.use("/profesiones", profesionesRoutesApi);
+
+app.listen(3000, () => {
+    console.log("En el 3000");
+})
