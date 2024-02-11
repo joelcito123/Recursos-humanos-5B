@@ -1,12 +1,10 @@
-const config = require('../../config/config');
-
 module.exports = {
   "development": {
-    "username": config.username,
-    "password": config.password,
-    "database": config.database,
-    "host": config.hostname,
-    "dialect": "mysql"
+    "username": "root",
+    "password": process.env.PASSWORD,
+    "database": process.env.DATABASE,
+    "host": process.env.HOST,
+    "dialect": process.env.DIALECT
   },
   "test": {
     "username": "root",

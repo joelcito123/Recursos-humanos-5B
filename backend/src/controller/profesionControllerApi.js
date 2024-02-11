@@ -8,7 +8,7 @@ const profesionesControllerApi = {
                 meta: {
                     status: 200,
                     total: profesiones.length,
-                    url: "/profesiones"
+                    url: "/api/profesiones"
                 },
                 data: profesiones
             })
