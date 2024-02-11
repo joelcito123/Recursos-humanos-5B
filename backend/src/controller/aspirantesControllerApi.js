@@ -3,31 +3,41 @@ const { Aspirantes, Profesiones } = require("../database/models");
 
 const aspirantesControllerApi = {
     list: (req, res) => {
-        try {
-            Aspirantes.findAll()
-                .then(aspirantes => {
-                    res.status(200).json({
-                        meta: {
-                            status: 200,
-                            total: aspirantes.length,
-                            url: "/api/aspirantes"
-                        },
-                        data: aspirantes
-                    })
-                })
-        } catch (error) {
-            res.status(error.status).json({
-                meta: {
-                    status: error.status,
-                    message: error.message
-                }
+        Aspirantes.findAll({
+            raw: true,
+            include: [
+                { model: Profesiones, as: 'profesiones', attributes: ['nombre'] }
+            ]
+        })
+            .then(aspirantes => {
+                res.status(200).json({
+                    meta: {
+                        status: 200,
+                        total: aspirantes.length,
+                        url: "/api/aspirantes"
+                    },
+                    data: aspirantes
+                });
+            })
+            .catch(error => {
+                const statusCode = error.status || 500;
+                res.status(statusCode).json({
+                    meta: {
+                        status: statusCode,
+                        message: error.message || "Ocurrió un error interno"
+                    }
+                });
             });
-        }
-
-    },
+    }
+    ,
     detail: (req, res) => {
         let id = req.params.id;
-        Aspirantes.findByPk(id)
+        Aspirantes.findByPk(id, {
+            raw: true,
+            include: [
+                { model: Profesiones, as: 'profesiones', attributes: ['nombre'] }
+            ]
+        })
             .then(aspirante => {
                 res.status(200).json({
                     meta: {
@@ -37,6 +47,15 @@ const aspirantesControllerApi = {
                     data: aspirante
                 })
             })
+            .catch(error => {
+                const statusCode = error.status || 500;
+                res.status(statusCode).json({
+                    meta: {
+                        status: statusCode,
+                        message: error.message || "Ocurrió un error interno"
+                    }
+                });
+            });
     }
 }
 
