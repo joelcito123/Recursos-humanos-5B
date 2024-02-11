@@ -1,9 +1,11 @@
+const config = require('../../config/config');
+
 module.exports = {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "recruitingRH",
-    "host": "127.0.0.1",
+    "username": config.username,
+    "password": config.password,
+    "database": config.database,
+    "host": config.hostname,
     "dialect": "mysql"
   },
   "test": {
