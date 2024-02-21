@@ -12,7 +12,7 @@ const Aspirantes = () => {
     }, [])
 
     return (
-        <section className="content aspirantes">
+        <section className="content aspirantes" id='aspirantes'>
             <h2>Aspirantes</h2>
             <article className="person-boxes">
                 {aspirantes.map(aspirante => (

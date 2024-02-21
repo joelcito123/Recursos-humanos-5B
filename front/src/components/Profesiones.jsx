@@ -10,7 +10,7 @@ const Profesiones = () => {
 
 
   return (
-    <section className="content profesiones">
+    <section className="content profesiones" id="profesiones">
       <h2 className="mt-3">Profesiones</h2>
       <div className="list-group shadow-sm p-3 mb-5 rounded">
         <h4 className="list-group-item list-group-item-action active text-center"
