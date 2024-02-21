@@ -10,13 +10,14 @@ const aspirantesControllerApi = {
             ]
         })
             .then(aspirantes => {
+                console.log(aspirantes)
                 res.status(200).json({
                     meta: {
                         status: 200,
                         total: aspirantes.length,
                         url: "/api/aspirantes"
                     },
-                    data: aspirantes
+                    payload: aspirantes
                 });
             })
             .catch(error => {
@@ -44,7 +45,7 @@ const aspirantesControllerApi = {
                         status: 200,
                         url: `/api/aspirantes/${id}`
                     },
-                    data: aspirante
+                    payload: aspirante
                 })
             })
             .catch(error => {
