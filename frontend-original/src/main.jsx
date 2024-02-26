@@ -11,24 +11,36 @@ import SeccionAcceso from './components/SeccionAcceso'
 import BarraLateral from './components/BarraLateral'
 import SeccionContacto from './components/SeccionContacto'
 import SeccionEmpresas from './components/SeccionEmpresas'
+import SeccionAspirantes from './components/SeccionAspirantes'
+import ErrorPage from './Errorpage'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Contenedor />,
+    errorElement: <ErrorPage/>
   },
   {
     path: "/profesiones",
-    element: <ListaProfesiones />
+    element: <ListaProfesiones />,
+    errorElement: <ErrorPage/>
   },
   {
     path: "/contacto",
-    element: <SeccionContacto />
+    element: <SeccionContacto />,
+    errorElement: <ErrorPage/>
   },
   {
     path: "/empresas",
-    element: <SeccionEmpresas />
-  }
+    element: <SeccionEmpresas />,
+    errorElement: <ErrorPage/>
+  },
+  {
+    path: "/aspirantes",
+    element: <SeccionAspirantes/>,
+    errorElement: <ErrorPage/>
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

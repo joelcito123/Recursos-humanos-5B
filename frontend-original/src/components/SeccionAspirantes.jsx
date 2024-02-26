@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import AspirantesBio from './AspirantesBio'
 
-function SeccionAspirantes() { 
+function SeccionAspirantes() {
     const [datosAspirantes, setDatosAspirantes] = useState([]);
 
     useEffect(() => {
@@ -15,19 +15,22 @@ function SeccionAspirantes() {
 
     }, []);
 
-    
+
 
     return (
-        <section className="content aspirantes">
-            <h2>Aspirantes</h2>
-            <article className="person-boxes">
-                {/* datos de los aspirantes */}
-                 {datosAspirantes.map((aspirante, i) => {
-                    return < AspirantesBio {...aspirante} key={i}/>
-                })}
-                {/* datos de los aspirantes */}
-            </article>
-        </section>
+        <main className="content-wrap">
+            <section className="content aspirantes">
+                <h2>Aspirantes</h2>
+                <article className="person-boxes">
+                    {/* datos de los aspirantes */}
+                    {datosAspirantes.map((aspirante, i) => {
+                        return < AspirantesBio {...aspirante} key={i} />
+                    })}
+                    {/* datos de los aspirantes */}
+                </article>
+            </section>
+        </main>
+
     )
 }
 
