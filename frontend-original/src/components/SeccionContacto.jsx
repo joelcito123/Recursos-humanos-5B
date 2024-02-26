@@ -1,6 +1,6 @@
 import '../assets/styles/seccionContacto.css'
 
-const ContactSection = () => {
+function ContactSection () {
   return (
     <div className="contact-section">
       <h2>Contáctanos</h2>

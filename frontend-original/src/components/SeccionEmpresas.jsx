@@ -1,6 +1,6 @@
 import '../assets/styles/seccionEmpresas.css';
 
-const CompanySection = () => {
+function CompanySection () {
   return (
     <div className="company-section">
       <h2>Nuestras Empresas Colaboradoras</h2>
