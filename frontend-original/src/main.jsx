@@ -14,31 +14,38 @@ import SeccionEmpresas from './components/SeccionEmpresas'
 import SeccionAspirantes from './components/SeccionAspirantes'
 import SeccionPostulate from './components/SeccionPostulate'
 import BusquedaSeleccion from './components/BusquedaSeleccion'
+import Error404 from './components/Error404'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <BusquedaSeleccion />,
+    errorElement: <Error404 />
   },
   {
     path: "/profesiones",
     element: <ListaProfesiones />,
+    errorElement: <Error404 />
   },
   {
     path: "/contacto",
     element: <SeccionContacto />,
+    errorElement: <Error404 />
   },
   {
     path: "/empresas",
     element: <SeccionEmpresas />,
+    errorElement: <Error404 />
   },
   {
     path: "/aspirantes",
     element: <SeccionAspirantes/>,
+    errorElement: <Error404 />
   },
   {
     path: "/postulate",
-    element: <SeccionPostulate />
+    element: <SeccionPostulate />,
+    errorElement: <Error404 />
   },
 ]);
 
