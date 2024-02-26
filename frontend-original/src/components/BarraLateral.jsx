@@ -7,7 +7,7 @@ function BarraLateral() {
         { nombre: "Empresas", icon: faBuilding, link: "/empresas", clase: "bi bi-building" },
         { nombre: "Aspirantes", icon: faUser, link: "/aspirantes", clase: "bi bi-person" },
         { nombre: "Profesiones", icon: faList, link: "/profesiones", clase: "bi bi-list-check" },
-        { nombre: "Postulate aquí", icon: faAddressCard, link: "#", clase: "bi bi-person-vcard" },
+        { nombre: "Postulate aquí", icon: faAddressCard, link: "/postulate", clase: "bi bi-person-vcard" },
         { nombre: "Contacto", icon: faMessage, link: "/contacto", clase: "bi bi-chat-left-text" },
     ]
     return (

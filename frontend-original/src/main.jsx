@@ -47,6 +47,10 @@ const router = createBrowserRouter([
     element: <SeccionPostulate />,
     errorElement: <Error404 />
   },
+  {
+    path: "/felicidades",
+    element: <h1>Te Postulaste!!!</h1>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

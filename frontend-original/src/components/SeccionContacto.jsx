@@ -10,8 +10,9 @@ const ContactSection = () => {
       </p>
       <ul>
         <li>Teléfono: +01 234 567 89</li>
-        <li>Correo electrónico: contact@example.com</li>
-        <li>Dirección: San Francisco, CA 94126, USA</li>
+        <li>Correo electrónico: grupo20@gmail.com</li>
+        <li>Dirección: Jujuy, HCA 4630, ARG</li>
+        <li>Dirección: Jujuy, PALPALA 258, ARG</li>
       </ul>
     </div>
   );

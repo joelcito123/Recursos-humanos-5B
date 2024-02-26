@@ -1,29 +1,25 @@
-import { useEffect } from "react";
-import { useActionData } from "react-router-dom";
+import '../assets/styles/formulario.css'
 
 function SeccionPostulate() {
-
-    var data = { username: "example" };
-    var url = "http://localhost:3080/api/aspirantes/submit";
-
-    useEffect(() => {
-        fetch(url, {
-            method: "POST", // or 'PUT'
-            body: JSON.stringify(data), // data can be `string` or {object}!
-            headers: {
-              "Content-Type": "application/json",
-            },
-          })
-            .then((res) => res.json())
-            .then((response) => console.log("Success:", response))
-            
-    })
-
     return (
         <>
-            <form action="" method="POST">
-                <input type="text" name="nombre" placeholder="Inserte Nombre"/>
+            <form action='/felicidades'>
+                <label htmlFor="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required="" />
+                <label htmlFor="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required="" />
+                <label>Sexo:</label>
+                <div className="genero">
+                    <input type="radio" id="hombre" name="sexo" defaultValue="hombre" />
+                    <label htmlFor="hombre">Hombre</label>
+                    <input type="radio" id="mujer" name="sexo" defaultValue="mujer" />
+                    <label htmlFor="mujer">Mujer</label>
+                </div>
+                <div className='enviar'>
+                    <input type="submit" defaultValue="Enviar" />
+                </div>
             </form>
+
         </>
     )
 }

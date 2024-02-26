@@ -1,0 +1,36 @@
+form {
+    margin: 0 auto;
+    padding: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="text"], input[type="radio"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.enviar {
+    text-align: center;
+    
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    width: 80%;
+}
+
+.genero {
+    display: flex;
+    justify-content: space-around;
+}
