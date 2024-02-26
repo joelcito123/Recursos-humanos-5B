@@ -14,12 +14,6 @@ const controller = {
         }
 
         res.json(resultado)
-    },
-    submit: async (req, res) => {
-        let cosas = await Aspirantes.create({
-            nombre: req.body.nombre,
-        })
-        res.send('hola como estas')
     }
 }
 
