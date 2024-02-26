@@ -1,21 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Contenedor from './components/Contenedor'
-import ListaProfesiones from './components/ListaProfesiones'
+
 import "./assets/styles/main.css"
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// Componentes
+
+import ListaProfesiones from './components/ListaProfesiones'
 import SeccionAcceso from './components/SeccionAcceso'
 import BarraLateral from './components/BarraLateral'
 import SeccionContacto from './components/SeccionContacto'
 import SeccionEmpresas from './components/SeccionEmpresas'
+import SeccionPostulate from './components/SeccionPostulate'
+import BusquedaSeleccion from './components/BusquedaSeleccion'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Contenedor />,
+    element: <BusquedaSeleccion />,
   },
   {
     path: "/profesiones",
@@ -28,7 +30,11 @@ const router = createBrowserRouter([
   {
     path: "/empresas",
     element: <SeccionEmpresas />
-  }
+  },
+  {
+    path: "/postulate",
+    element: <SeccionPostulate />
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

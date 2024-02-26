@@ -4,7 +4,7 @@ import Logo from "../assets/images/logo-dh.png";
 
 function BarraLateral() {
     let opciones = [
-        { nombre: "Empresas", icon: faBuilding, link: "#", clase: "bi bi-building" },
+        { nombre: "Empresas", icon: faBuilding, link: "/empresas", clase: "bi bi-building" },
         { nombre: "Aspirantes", icon: faUser, link: "#", clase: "bi bi-person" },
         { nombre: "Profesiones", icon: faList, link: "/profesiones", clase: "bi bi-list-check" },
         { nombre: "Postulate aquí", icon: faAddressCard, link: "#", clase: "bi bi-person-vcard" },
