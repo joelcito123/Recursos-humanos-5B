@@ -1,46 +1,45 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Contenedor from './components/Contenedor'
-import ListaProfesiones from './components/ListaProfesiones'
+
 import "./assets/styles/main.css"
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// Componentes
+
+import ListaProfesiones from './components/ListaProfesiones'
 import SeccionAcceso from './components/SeccionAcceso'
 import BarraLateral from './components/BarraLateral'
 import SeccionContacto from './components/SeccionContacto'
 import SeccionEmpresas from './components/SeccionEmpresas'
 import SeccionAspirantes from './components/SeccionAspirantes'
-import ErrorPage from './Errorpage'
+import SeccionPostulate from './components/SeccionPostulate'
+import BusquedaSeleccion from './components/BusquedaSeleccion'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Contenedor />,
-    errorElement: <ErrorPage/>
+    element: <BusquedaSeleccion />,
   },
   {
     path: "/profesiones",
     element: <ListaProfesiones />,
-    errorElement: <ErrorPage/>
   },
   {
     path: "/contacto",
     element: <SeccionContacto />,
-    errorElement: <ErrorPage/>
   },
   {
     path: "/empresas",
     element: <SeccionEmpresas />,
-    errorElement: <ErrorPage/>
   },
   {
     path: "/aspirantes",
     element: <SeccionAspirantes/>,
-    errorElement: <ErrorPage/>
   },
-
+  {
+    path: "/postulate",
+    element: <SeccionPostulate />
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

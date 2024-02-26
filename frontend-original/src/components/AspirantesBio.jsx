@@ -2,14 +2,6 @@ import { faComment, faEnvelope, faStar } from '@fortawesome/free-solid-svg-icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function AspirantesBio(props) {
-    const imagenes = [
-        { imagen: 'http://localhost:3080/uploads/imagen1.jpg' },
-        { imagen: 'http://localhost:3080/uploads/imagen2.jpg' },
-        { imagen: 'http://localhost:3080/uploads/imagen3.jpg' },
-        { imagen: 'http://localhost:3080/uploads/imagen4.jpg' },
-        { imagen: 'http://localhost:3080/uploads/imagen5.jpg' },
-        { imagen: 'http://localhost:3080/uploads/imagen6.jpg' }
-    ]
     return (
 
         <div className="person-box shadow p-3 mb-5 bg-body-tertiary rounded">
