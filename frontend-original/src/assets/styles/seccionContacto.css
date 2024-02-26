@@ -1,0 +1,23 @@
+.contact-section {
+    padding: 20px;
+  }
+  
+  .contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-section li {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }

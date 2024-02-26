@@ -6,9 +6,9 @@ function BarraLateral() {
     let opciones = [
         { nombre: "Empresas", icon: faBuilding, link: "#", clase: "bi bi-building" },
         { nombre: "Aspirantes", icon: faUser, link: "#", clase: "bi bi-person" },
-        { nombre: "Profesiones", icon: faList, link: "#", clase: "bi bi-list-check" },
+        { nombre: "Profesiones", icon: faList, link: "/profesiones", clase: "bi bi-list-check" },
         { nombre: "Postulate aquí", icon: faAddressCard, link: "#", clase: "bi bi-person-vcard" },
-        { nombre: "Contacto", icon: faMessage, link: "#", clase: "bi bi-chat-left-text" },
+        { nombre: "Contacto", icon: faMessage, link: "/contacto", clase: "bi bi-chat-left-text" },
     ]
     return (
         <header className="menu-wrap">

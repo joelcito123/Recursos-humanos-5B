@@ -1,0 +1,18 @@
+.company-section {
+    padding: 20px;
+  }
+  
+  .company-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .company-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .company-section li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
