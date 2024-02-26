@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 import AspirantesBio from './AspirantesBio'
 
-function SeccionAspirantes() {
-
+function SeccionAspirantes() { 
     const [datosAspirantes, setDatosAspirantes] = useState([]);
 
     useEffect(() => {

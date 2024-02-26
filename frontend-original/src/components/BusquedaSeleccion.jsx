@@ -1,5 +1,6 @@
-import SeccionAspirantes from "./SeccionAspritanes";
+import SeccionAspirantes from "./SeccionAspirantes";
 import ListaProfesiones from "./ListaProfesiones";
+import Banner from "../assets/images/banner.jpg";
 
 function BusquedaSeleccion() {
     return (
@@ -12,7 +13,7 @@ function BusquedaSeleccion() {
                     administrativos, profesionales y técnicos.
                 </p>
                 <div>
-                    <img src="/images/banner.jpg" alt="Rcursos Humanos" />
+                    <img src={Banner} alt="Rcursos Humanos" />
                 </div>
                 {/*Fin Encabezado*/}
             </header>

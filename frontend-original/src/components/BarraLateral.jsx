@@ -1,9 +1,20 @@
+import { faAddressCard, faBuilding, faList, faMessage, faUser } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Logo from "../assets/images/logo-dh.png";
+
 function BarraLateral() {
+    let opciones = [
+        { nombre: "Empresas", icon: faBuilding, link: "#", clase: "bi bi-building" },
+        { nombre: "Aspirantes", icon: faUser, link: "#", clase: "bi bi-person" },
+        { nombre: "Profesiones", icon: faList, link: "#", clase: "bi bi-list-check" },
+        { nombre: "Postulate aquí", icon: faAddressCard, link: "#", clase: "bi bi-person-vcard" },
+        { nombre: "Contacto", icon: faMessage, link: "#", clase: "bi bi-chat-left-text" },
+    ]
     return (
         <header className="menu-wrap">
             <figure className="user">
                 <div className="user-avatar">
-                    <img src="/images/logo-dh.png" alt="Logo Digital House	" />
+                    <img src={Logo} alt="Logo Digital House	" />
                 </div>
                 <figcaption>Digital House</figcaption>
             </figure>
@@ -11,43 +22,18 @@ function BarraLateral() {
                 <section className="menu">
                     <h3>Opciones</h3>
                     <ul>
-                        <li>
-                            <a href="#">
-                                <i
-                                    className="bi bi-building"
-                                    style={{ fontSize: "1.2rem", color: "cornflowerblue" }}
-                                />
-                                - Empresas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i
-                                    className="bi bi-person"
-                                    style={{ fontSize: "1.2rem", color: "cornflowerblue" }}
-                                />
-                                - Aspirantes
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i className="bi bi-list-check" />- Profesiones
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i
-                                    className="bi bi-person-vcard"
-                                    style={{ fontSize: "1.2rem", color: "cornflowerblue" }}
-                                />
-                                - Postulate aquí
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i className="bi bi-chat-left-text" />- Contacto
-                            </a>
-                        </li>
+                        {opciones.map((opcion, index) => {
+                            return (
+                                <li key={index}>
+                                    <a href={opcion.link}>
+                                        <FontAwesomeIcon icon={opcion.icon} className={opcion.clase}
+                                            style={{ fontSize: "1.2rem", color: "cornflowerblue" }}
+                                        />
+                                        {opcion.nombre}
+                                    </a>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </section>
             </nav>
