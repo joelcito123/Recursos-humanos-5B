@@ -15,7 +15,7 @@ function AspirantesBio(props) {
                         <img src={imagenes[props.id - 1].imagen} alt="imagen aspirante" />
                     </div>
                     <div className="box-bio">
-                        <h2 className="bio-name">{props.nombre}</h2>
+                        <h2 className="bio-name">{props.nombre} {props.apellido}</h2>
                         <p className="bio-position">{props.profesiones.nombre}</p>
                     </div>
                     
