@@ -348,3 +348,35 @@ body {
 .content-wrap .person-boxes .person-box .box-actions button:hover svg circle {
   fill: #2b3a60;
 }
+
+@media (min-width: 361px) {
+  .dashboard {
+    display: block;
+  }
+
+  div.search {
+    width: 40%;
+  }
+
+  #search {
+    width: 70%;
+  }
+
+  .oculto {
+    display: none;
+  }
+}
+
+@media (min-width: 810px) {
+  .menu-wrap {
+    display: block;
+  }
+
+  .dashboard {
+    display: grid;
+  }
+
+  button a i.bi-list {
+    display: none;
+  }
+}

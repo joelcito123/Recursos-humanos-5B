@@ -4,4 +4,5 @@ const aspirantesController = require('../controllers/aspirantesController');
 
 router.get('/aspirantes', aspirantesController.list);
 
+
 module.exports = router;

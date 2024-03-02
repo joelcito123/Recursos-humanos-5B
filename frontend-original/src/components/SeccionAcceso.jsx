@@ -1,7 +1,16 @@
-import { faArrowRightToBracket, faMagnifyingGlass, faU, faUser, faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightToBracket, faMagnifyingGlass, faBars, faUser, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import BarraLateral from './BarraLateral'
+import {useState} from 'react'
 
 function SeccionAcceso() {
+
+    const [tieneClase, setTieneClase] = useState(false);
+
+    function haceClick () {
+        setTieneClase(tieneClase => !tieneClase);
+    }
+
     return (
         <section className="search-wrap">
             <div className="search">
@@ -14,6 +23,16 @@ function SeccionAcceso() {
                 </label>
             </div>
             <div className="user-actions">
+                <button>
+                    <a href="#">
+                        <FontAwesomeIcon
+                            icon={faBars}
+                            className=""
+                            onClick={haceClick}
+                            style={{ fontSize: "1.5rem", color: "cornflowerblue" }}
+                        />
+                    </a>
+                </button>
                 <button>
                     <a href="#">
                         <FontAwesomeIcon icon={faUserPlus}
@@ -37,8 +56,9 @@ function SeccionAcceso() {
                             style={{ fontSize: "1.5rem", color: "cornflowerblue" }}
                         />
                     </a>
-                </button>
+                </button> 
             </div>
+            <BarraLateral  isOculto={tieneClase}/>
         </section>
     )
 }
