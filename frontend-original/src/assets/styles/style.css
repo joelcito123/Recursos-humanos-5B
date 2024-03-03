@@ -23,6 +23,7 @@ body {
   grid-template-columns: 300px auto;
   grid-template-rows: 80px auto;
   grid-template-areas: 'menu search' 'menu content';
+  overflow-y: scroll;
 }
 .search-wrap {
   grid-area: search;
@@ -182,7 +183,6 @@ body {
 .content-wrap {
   grid-area: content;
   padding: 3em;
-  overflow: auto;
 }
 .content-wrap .content-head {
   display: flex;
@@ -349,7 +349,7 @@ body {
   fill: #2b3a60;
 }
 
-@media (min-width: 361px) {
+@media (min-width: 240px) {
   .dashboard {
     display: block;
   }
@@ -376,7 +376,7 @@ body {
     display: grid;
   }
 
-  button a i.bi-list {
+  button a .bi-list {
     display: none;
   }
 }

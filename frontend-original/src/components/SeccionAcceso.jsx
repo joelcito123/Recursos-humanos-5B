@@ -1,6 +1,5 @@
 import { faArrowRightToBracket, faMagnifyingGlass, faBars, faUser, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import BarraLateral from './BarraLateral'
 import { useState } from 'react'
 
 function SeccionAcceso({isOculto}) {
@@ -25,11 +24,11 @@ function SeccionAcceso({isOculto}) {
                     </label>
                 </div>
                 <div className="user-actions">
-                    <button>
+                    <button >
                         <a href="#">
                             <FontAwesomeIcon
                                 icon={faBars}
-                                className=""
+                                className="bi-list"
                                 onClick={haceClick}
                                 style={{ fontSize: "1.5rem", color: "cornflowerblue" }}
                             />
