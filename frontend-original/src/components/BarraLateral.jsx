@@ -2,7 +2,7 @@ import { faAddressCard, faBuilding, faList, faMessage, faUser } from '@fortaweso
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Logo from "../assets/images/logo-dh.png";
 
-function BarraLateral({menuExist}) {
+function BarraLateral({ menuExist }) {
     let opciones = [
         { nombre: "Empresas", icon: faBuilding, link: "/empresas", clase: "bi bi-building" },
         { nombre: "Aspirantes", icon: faUser, link: "/aspirantes", clase: "bi bi-person" },
@@ -14,12 +14,15 @@ function BarraLateral({menuExist}) {
 
     return (
         <header className={`menu-wrap ${menuExist ? 'oculto' : ''}`}>
-            <figure className="user">
-                <div className="user-avatar">
-                    <img src={Logo} alt="Logo Digital House	" />
-                </div>
-                <figcaption>Digital House</figcaption>
-            </figure>
+            <a href="/">
+                <figure className="user">
+                    <div className="user-avatar">
+                        <img src={Logo} alt="Logo Digital House	" />
+                    </div>
+                    <figcaption>Digital House</figcaption>
+                </figure>
+            </a>
+
             <nav>
                 <section className="menu">
                     <h3>Opciones</h3>

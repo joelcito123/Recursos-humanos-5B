@@ -11,7 +11,6 @@ body {
   height: 100%;
   overflow: hidden;
   background: #f5f5fa;
-  font-size: 16px;
   line-height: 120%;
   font-family: Open Sans, Helvetica, sans-serif;
 }
@@ -182,7 +181,6 @@ body {
 }
 .content-wrap {
   grid-area: content;
-  padding: 3em;
 }
 .content-wrap .content-head {
   display: flex;
@@ -350,6 +348,14 @@ body {
 }
 
 @media (min-width: 240px) {
+  body {
+    font-size: 12px;
+  }
+
+  .content-wrap {
+    padding: 1em;
+  }
+
   .dashboard {
     display: block;
   }
@@ -378,5 +384,13 @@ body {
 
   button a .bi-list {
     display: none;
+  }
+
+  .content-wrap {
+    padding: 3em;
+  }
+
+  body {
+    font-size: 16px;
   }
 }
