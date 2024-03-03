@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 
 import "./assets/styles/main.css"
@@ -6,9 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Componentes
 
+import App from "./components/App"
 import ListaProfesiones from './components/ListaProfesiones'
-import SeccionAcceso from './components/SeccionAcceso'
-import BarraLateral from './components/BarraLateral'
 import SeccionContacto from './components/SeccionContacto'
 import SeccionEmpresas from './components/SeccionEmpresas'
 import SeccionAspirantes from './components/SeccionAspirantes'
@@ -56,9 +55,8 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <div className="dashboard">
-      <SeccionAcceso />
+      <App/>
       <RouterProvider router={router} />
-      <BarraLateral />
     </div>
   </React.StrictMode>,
 )
